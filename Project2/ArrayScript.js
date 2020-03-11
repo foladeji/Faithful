@@ -37,7 +37,6 @@ function setup() {
             translateY: anime.random(-800, 800),
             duration: 2000,
             delay: 1250,
-            scale: 2,
             loop: true,
             direction: 'reverse',
             easing: 'easeInOutSine',
