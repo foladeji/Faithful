@@ -13,9 +13,10 @@ function setup() {
     var rectEls = document.querySelectorAll('rect');
     var polyEls = document.querySelectorAll('polygon');
     
+    
     for (var i = 0; i < fillEls.length; i++)
     for (var j = 0; j < rectEls.length; j++)
-    for (var k = 0; k < polyEls.length; k++){
+    for (var k = 0; k < polyEls.length; k++) {
 
         // for each path
         var fillEl = fillEls[i];
@@ -35,7 +36,8 @@ function setup() {
             translateX: anime.random(-800, 800),
             translateY: anime.random(-800, 800),
             duration: 2000,
-            delay: 900,
+            delay: 1250,
+            scale: 2,
             loop: true,
             direction: 'reverse',
             easing: 'easeInOutSine',
@@ -76,20 +78,20 @@ function setup() {
 }
 
 
-//function mouseClicked() {
-//
-//    console.log("reproduction running: " + animationPaused);
-//
-//    // mouse-controlled reproduction
-//    if (animationPaused) {
-//        for (let index = 0; index < animatedFills.length; index++) {
-//            animatedFills[index].play();
-//        }
-//    } else {
-//        for (let index = 0; index < animatedFills.length; index++) {
-//            animatedFills[index].pause();
-//        }
-//    }
-//    animationPaused = !animationPaused;
-//
-//}
+function mouseClicked() {
+
+    console.log("reproduction running: " + animationPaused);
+
+    // mouse-controlled reproduction
+    if (animationPaused) {
+        for (let index = 0; index < animatedFills.length; index++) {
+            animatedFills[index].play();
+        }
+    } else {
+        for (let index = 0; index < animatedFills.length; index++) {
+            animatedFills[index].pause();
+        }
+    }
+    animationPaused = !animationPaused;
+
+}
